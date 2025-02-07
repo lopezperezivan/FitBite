@@ -1,0 +1,27 @@
+.container {
+    margin-top: 80px; /* Espacio para navbar fijo */
+}
+
+.card {
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: scale(1.02);
+}
+
+.form-control {
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.btn-dark {
+    background-color: #333;
+}
+
+footer {
+    background: black;
+    color: white;
+    padding: 15px;
+}
