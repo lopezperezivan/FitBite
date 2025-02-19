@@ -1,27 +1,98 @@
+/* Espacio para navbar fijo */
 .container {
-    margin-top: 80px; /* Espacio para navbar fijo */
+    margin-top: 80px;
 }
 
+/* Tarjetas con efecto de elevación */
 .card {
     border-radius: 10px;
-    transition: transform 0.3s ease-in-out;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
-
 .card:hover {
-    transform: scale(1.02);
+    transform: translateY(-5px) scale(1.03);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
 }
 
-.form-control {
-    border-radius: 5px;
-    border: 1px solid #ccc;
-}
-
+/* Estilos del botón oscuro */
 .btn-dark {
     background-color: #333;
+    transition: background 0.3s ease-in-out;
+}
+.btn-dark:hover {
+    background-color: #000;
 }
 
+/* Footer */
 footer {
     background: black;
     color: white;
     padding: 15px;
+}
+
+/* Efecto de fade-in para animaciones */
+.fade-in {
+    opacity: 0;
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+    transform: translateY(20px);
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Hero con fondo parallax */
+.hero-section {
+    min-height: 80vh;
+    background: url('https://via.placeholder.com/1920x1080') no-repeat center center/cover;
+    background-attachment: fixed;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.4); /* Oscurece para resaltar el texto */
+}
+
+.hero-section .container {
+    position: relative;
+    z-index: 2;
+}
+
+/* Botón flotante para volver arriba */
+#scrollToTopBtn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    display: none;
+    background-color: #000;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    cursor: pointer;
+    transition: opacity 0.3s ease-in-out;
+}
+
+#scrollToTopBtn:hover {
+    opacity: 0.7;
+}
+
+/* Tipografía personalizada */
+body {
+    font-family: "Inter", sans-serif;
+}
+
+h1, h2, h3, .navbar-brand {
+    font-family: "Poppins", sans-serif;
 }
