@@ -1,55 +1,79 @@
-/* Espacio para navbar fijo */
+/* ====== Configuración Global ====== */
+body {
+    font-family: "Inter", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+}
+
+/* ====== Tipografía ====== */
+h1, h2, h3, .navbar-brand {
+    font-family: "Poppins", sans-serif;
+}
+
+/* ====== Navbar ====== */
+.navbar {
+    background-color: #A5C8B6 !important;
+}
+
+.navbar .btn-dark {
+    font-weight: bold;
+}
+
+/* ====== Ajuste de Espaciado General ====== */
 .container {
     margin-top: 80px;
 }
 
-/* Tarjetas con efecto de elevación */
+/* ====== Tarjetas con Efecto de Elevación ====== */
 .card {
     border-radius: 10px;
-    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 .card:hover {
     transform: translateY(-5px) scale(1.03);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
 }
 
-/* Estilos del botón oscuro */
+/* ====== Botones Personalizados ====== */
 .btn-dark {
     background-color: #333;
     transition: background 0.3s ease-in-out;
 }
 .btn-dark:hover {
-    background-color: #000;
+    background-color: black;
 }
 
-/* Footer */
-footer {
+/* ====== Footer ====== */
+.footer {
     background: black;
     color: white;
     padding: 15px;
+    text-align: center;
 }
 
-/* Efecto de fade-in para animaciones */
+/* ====== Efecto de Fade-in ====== */
 .fade-in {
     opacity: 0;
-    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+    transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
     transform: translateY(20px);
 }
-
 .fade-in.visible {
     opacity: 1;
     transform: translateY(0);
 }
 
-/* Hero con fondo parallax */
+/* ====== Hero con Fondo Parallax ====== */
 .hero-section {
     min-height: 80vh;
-    background: url('https://via.placeholder.com/1920x1080') no-repeat center center/cover;
+    background: url('../img/parallax.jpg') no-repeat center center/cover;
     background-attachment: fixed;
-    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
+    color: white;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
 }
 
 .hero-section::before {
@@ -59,21 +83,22 @@ footer {
     right: 0;
     bottom: 0;
     left: 0;
-    background-color: rgba(0, 0, 0, 0.4); /* Oscurece para resaltar el texto */
+    background-color: rgba(0, 0, 0, 0.4);
 }
 
 .hero-section .container {
     position: relative;
     z-index: 2;
+    text-align: center;
 }
 
-/* Botón flotante para volver arriba */
+/* ====== Botón Flotante para Volver Arriba ====== */
 #scrollToTopBtn {
     position: fixed;
     bottom: 30px;
     right: 30px;
     display: none;
-    background-color: #000;
+    background-color: black;
     color: white;
     border: none;
     border-radius: 50%;
@@ -86,13 +111,4 @@ footer {
 
 #scrollToTopBtn:hover {
     opacity: 0.7;
-}
-
-/* Tipografía personalizada */
-body {
-    font-family: "Inter", sans-serif;
-}
-
-h1, h2, h3, .navbar-brand {
-    font-family: "Poppins", sans-serif;
 }

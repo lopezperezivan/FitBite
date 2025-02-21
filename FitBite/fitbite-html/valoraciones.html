@@ -8,10 +8,10 @@
     <link rel="stylesheet" href="css/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="d-flex flex-column min-vh-100">
 
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #A5C8B6;">
+    <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container">
             <a class="navbar-brand fw-bold" href="index.html">FITBITE</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -25,52 +25,48 @@
                     <li class="nav-item"><a class="nav-link active" href="valoraciones.html">Valoraciones</a></li>
                     <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
                 </ul>
-                <a href="#" class="btn btn-dark ms-3">Únete ahora</a>
+                <a href="login.html" class="btn btn-dark ms-3">Únete ahora</a>
             </div>
         </div>
     </nav>
 
     <!-- Sección de Valoraciones -->
-    <section class="container my-5 fade-in">
+    <main class="container my-5 fade-in flex-grow-1">
         <h2 class="fw-bold text-center mb-4">Lo que dicen nuestros clientes</h2>
 
         <div id="carouselValoraciones" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner">
-                <!-- Reseña 1 -->
+            <div class="carousel-inner text-center">
+                
+                <!-- Reseña 1: José Melón (La Leyenda con su cabra 🐐😂) -->
                 <div class="carousel-item active">
-                    <div class="testimonial text-center">
-                        <img src="https://via.placeholder.com/100" class="rounded-circle mb-3" alt="Usuario">
+                    <div class="testimonial">
+                        <img src="img/persona_3.jpg" class="rounded-circle mb-3 img-fluid" style="width: 120px; height: 120px; object-fit: cover;" alt="José Melón">
                         <h5>José Melón</h5>
-                        <p class="text-muted">
-                            "Otra vez y encima pagando. Otra vez y encima pagando. Otra vez y encima pagando."
-                        </p>
+                        <p class="text-muted">"Otra vez y encima pagando. Otra vez y encima pagando. Otra vez y encima pagando."</p>
                         <p>⭐⭐⭐⭐⭐</p>
                     </div>
                 </div>
 
-                <!-- Reseña 2 -->
+                <!-- Reseña 2: María López (Fitness Enthusiast) -->
                 <div class="carousel-item">
-                    <div class="testimonial text-center">
-                        <img src="https://via.placeholder.com/100" class="rounded-circle mb-3" alt="Usuario">
+                    <div class="testimonial">
+                        <img src="img/persona_1.jpg" class="rounded-circle mb-3 img-fluid" style="width: 120px; height: 120px; object-fit: cover;" alt="María López">
                         <h5>María López</h5>
-                        <p class="text-muted">
-                            "Me encanta Fitbite, su plan de nutrición me ha ayudado muchísimo a mejorar mi rendimiento."
-                        </p>
+                        <p class="text-muted">"Me encanta Fitbite, su plan de nutrición me ha ayudado muchísimo a mejorar mi rendimiento."</p>
                         <p>⭐⭐⭐⭐⭐</p>
                     </div>
                 </div>
 
-                <!-- Reseña 3 -->
+                <!-- Reseña 3: Carlos Ramírez (Gym Lover) -->
                 <div class="carousel-item">
-                    <div class="testimonial text-center">
-                        <img src="https://via.placeholder.com/100" class="rounded-circle mb-3" alt="Usuario">
+                    <div class="testimonial">
+                        <img src="img/persona_2.jpg" class="rounded-circle mb-3 img-fluid" style="width: 120px; height: 120px; object-fit: cover;" alt="Carlos Ramírez">
                         <h5>Carlos Ramírez</h5>
-                        <p class="text-muted">
-                            "Gracias a Fitbite, ahora tengo un plan de comidas que se adapta a mi entrenamiento."
-                        </p>
+                        <p class="text-muted">"Gracias a Fitbite, ahora tengo un plan de comidas que se adapta a mi entrenamiento."</p>
                         <p>⭐⭐⭐⭐</p>
                     </div>
                 </div>
+
             </div>
 
             <!-- Controles del carrusel -->
@@ -83,13 +79,13 @@
                 <span class="visually-hidden">Siguiente</span>
             </button>
         </div>
-    </section>
+    </main>
 
     <!-- Botón flotante para volver arriba -->
     <button id="scrollToTopBtn" class="btn btn-dark">↑</button>
 
     <!-- Footer -->
-    <footer class="text-white text-center py-3 mt-5" style="background-color: #444;">
+    <footer class="footer mt-auto text-white text-center py-3" style="background-color: #444;">
         FITBITE® - Matito Enterprises©
     </footer>
 
